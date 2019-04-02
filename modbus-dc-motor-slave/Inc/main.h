@@ -44,6 +44,15 @@
 /* Includes ------------------------------------------------------------------*/
 
 /* USER CODE BEGIN Includes */
+#include "stm32f4xx_hal_conf.h"
+#include "stm32f4xx_hal.h"
+#include "stm32f4xx_hal_dma.h"
+#include "stm32f4xx_hal_def.h"
+#include "stm32f4xx_hal_uart.h"
+#include "stm32f4xx_hal_tim.h"
+
+#include "driver_init.h"
+#include "modbus_configuration.h"
 
 /* USER CODE END Includes */
 
@@ -77,7 +86,8 @@
  #define USE_FULL_ASSERT    1U 
 
 /* USER CODE BEGIN Private defines */
-
+extern UART_HandleTypeDef huart2;
+extern TIM_HandleTypeDef htim3;
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus

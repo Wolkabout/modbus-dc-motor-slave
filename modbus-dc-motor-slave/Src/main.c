@@ -53,7 +53,7 @@ UART_HandleTypeDef huart3;
 
 /* USER CODE BEGIN PV */
 /* Private variables ---------------------------------------------------------*/
-
+#define SLAVE_ADDRESS 2
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -73,7 +73,13 @@ void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
 /* USER CODE END PFP */
 
 /* USER CODE BEGIN 0 */
-
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+{
+	if(htim->Instance==TIM3)
+	{
+	  modbus_dependencies_timer_callback();
+	}
+}
 /* USER CODE END 0 */
 
 /**
@@ -111,12 +117,23 @@ int main(void)
   MX_TIM4_Init();
   /* USER CODE BEGIN 2 */
 
+  //init all HW interfaces
+  rs485_interface_init();
+
+  //Init Modbus, set slave address
+  modbus_init(SLAVE_ADDRESS);
+
+  //Init your own registers
+  modbus_register_mapping_init();
+
+  modbus_variable_set_value(&modbus_variables_map.motor_speed[0], 50);
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+	  modbus_process();
 
   /* USER CODE END WHILE */
 

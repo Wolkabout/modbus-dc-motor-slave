@@ -11,7 +11,7 @@ DC motor control supports features like motor speed, direction, str/stop, shortb
 | Coil       | Short Brake  | 1 = active 0 = inactive             | [0-1]       | 0             |
 | Coil       | Stand by     | 1 = active  0 = inactive            | [0-1]       | 0             |
 
-RS-485 communiction interface settigns are:
+RS-485 communiction interface settings are:
 * Bits for second: 115200bps
 * Data bits: 8
 * Stop bits: 1
@@ -31,12 +31,14 @@ RS-485 communiction interface settigns are:
  * [STM32Cube initialization code generator](https://www.st.com/en/development-tools/stm32cubemx.html)
  * [SW4STM32](https://www.st.com/en/development-tools/sw4stm32.html)
 
-## Usage
+## Example of Usage
 
-Default device addres is 1 in this example.
-ST LINK/V2 progammer or bootloader
+##### Running
+Default device addres is `1` in this example and it has configured Modbus as it is described above.
+
+Use [USB HID bootloader for Clicker 2 board](https://download.mikroe.com/examples/starter-boards/clicker-2/stm32f4/clicker-2-stm32f4-mikrobootloader-usb-hid-v130.zip) or [ST LINK/V2 programmer](https://www.st.com/en/development-tools/st-link-v2.html) to programm `modbus-dc-motor-slave/Debug/modbus-dc-motor-slave.hex` file.
 
 ##### Edit source
-Import project into SW4STM32 and insert changes. Minimal change that you can do is to change slave address changing this line `#define SLAVE_ADDRESS 1`
+Import project into SW4STM32 and insert changes. Minimal change that you can make is to change slave address changing this line `#define SLAVE_ADDRESS 1`
 
-For generating peripheral libraries, and modifying, run *WolkParking.ioc* file into STM32Cube generator and generate code which will be auto-embedded into the project.
+For further editing look at `doc` folder.

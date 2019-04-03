@@ -27,16 +27,19 @@ RS-485 communiction interface settings are:
 * [DC MOTOR 3 Click](https://www.mikroe.com/dc-motor-3-click)
 * [DC Motor Precision Gearmotor - 45 RPM (6-12V)](https://www.sparkfun.com/products/retired/12514). You can use any other DC motor which satisfies driver characteristics.
 
-##### IDE's
+##### SW
  * [STM32Cube initialization code generator](https://www.st.com/en/development-tools/stm32cubemx.html)
  * [SW4STM32](https://www.st.com/en/development-tools/sw4stm32.html)
+ * [USB HID bootloader for Clicker 2 board](https://download.mikroe.com/examples/starter-boards/clicker-2/stm32f4/clicker-2-stm32f4-mikrobootloader-usb-hid-v130.zip)
 
 ## Example of Usage
 
 ##### Running
 Default device addres is `1` in this example and it has configured Modbus as it is described above.
 
-Use [USB HID bootloader for Clicker 2 board](https://download.mikroe.com/examples/starter-boards/clicker-2/stm32f4/clicker-2-stm32f4-mikrobootloader-usb-hid-v130.zip) or [ST LINK/V2 programmer](https://www.st.com/en/development-tools/st-link-v2.html) to programm `modbus-dc-motor-slave/Debug/modbus-dc-motor-slave.hex` file.
+Use USB HID bootloader for Clicker 2 board or use [ST LINK/V2 programmer](https://www.st.com/en/development-tools/st-link-v2.html) with appropriate software to programm file:
+
+`modbus-dc-motor-slave/Debug/modbus-dc-motor-slave.hex`
 
 ##### Edit source
 Import project into SW4STM32 and insert changes. Minimal change that you can make is to change slave address changing this line `#define SLAVE_ADDRESS 1`

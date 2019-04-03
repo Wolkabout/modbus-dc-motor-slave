@@ -54,6 +54,8 @@
 #include "driver_init.h"
 #include "modbus_configuration.h"
 
+#include "dc_motor_3_click_driver_init.h"
+
 /* USER CODE END Includes */
 
 /* Private define ------------------------------------------------------------*/

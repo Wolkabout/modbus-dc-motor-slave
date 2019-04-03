@@ -1,0 +1,131 @@
+\hypertarget{modbus_8c}{}\section{Dependencies/wolk-\/modbus-\/0.1.2/modbus\+\_\+rtu/modbus.c File Reference}
+\label{modbus_8c}\index{Dependencies/wolk-\/modbus-\/0.\+1.\+2/modbus\+\_\+rtu/modbus.\+c@{Dependencies/wolk-\/modbus-\/0.\+1.\+2/modbus\+\_\+rtu/modbus.\+c}}
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}driver\+\_\+init.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}modbus.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}modbus\+\_\+dependencies.\+h\char`\"{}}\newline
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \mbox{\hyperlink{modbus_8c_a06fc87d81c62e9abb8790b6e5713c55ba0a7725b01850c37132ab05daf1d24a68}{M\+A\+X\+I\+M\+U\+M\+\_\+\+R\+E\+C\+E\+I\+V\+E\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+S\+I\+ZE}} = 150, 
+\mbox{\hyperlink{modbus_8c_a06fc87d81c62e9abb8790b6e5713c55ba560b116c050820f6195fa81c2c7392b3}{M\+A\+X\+I\+M\+U\+M\+\_\+\+R\+E\+S\+P\+O\+N\+S\+E\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+S\+I\+ZE}} = 150
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{modbus_8c_a67d9839b8e221bcb53bbbb2ba59ff618}{modbus\+\_\+init}} (uint8\+\_\+t address)
+\item 
+void \mbox{\hyperlink{modbus_8c_ac2eb6e2b4b299bf220ad0eea4010aa3e}{modbus\+\_\+close}} (void)
+\item 
+void \mbox{\hyperlink{modbus_8c_aac9fdbe39faea07b27faa7856ea107f4}{modbus\+\_\+clean\+\_\+all\+\_\+registers}} (void)
+\item 
+bool \mbox{\hyperlink{modbus_8c_a50003397da508d7f6703dd7ba3941d8e}{modbus\+\_\+process}} (void)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{modbus_8c_a9061aa30b2ce6c6ee2948b4c99138f6d}{modbus\+\_\+get\+\_\+slave\+\_\+address}} (void)
+\item 
+void \mbox{\hyperlink{modbus_8c_a7849f12c334d43c63dc0faa7925fd13d}{modbus\+\_\+byte\+\_\+received\+\_\+handler}} (void)
+\item 
+void \mbox{\hyperlink{modbus_8c_a30cba410a65e97e1465ff5e07c4cdccb}{modbus\+\_\+timer\+\_\+tick\+\_\+handler}} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+volatile uint16\+\_\+t \mbox{\hyperlink{modbus_8c_aa49e3fbdb0dcc0c28c8a1682816b6d6e}{Holding\+Register}} \mbox{[}\mbox{\hyperlink{group___insert_gae4693a6ca50104a719f8ed840bb419ac}{H\+O\+L\+D\+I\+N\+G\+\_\+\+R\+E\+G\+I\+S\+T\+ER}}\mbox{]}
+\item 
+volatile uint16\+\_\+t \mbox{\hyperlink{modbus_8c_a3de43cdc5f089d90d87a051f1b55100a}{Input\+Register}} \mbox{[}\mbox{\hyperlink{group___insert_ga2f10b7e4e03726942f00d00c9888f2dc}{I\+N\+P\+U\+T\+\_\+\+R\+E\+G\+I\+S\+T\+ER}}\mbox{]}
+\item 
+volatile uint16\+\_\+t \mbox{\hyperlink{modbus_8c_a940a57060a62fef7a8a7d656bd06f147}{Coils}} \mbox{[}\mbox{\hyperlink{group___insert_ga0b65fe24e4d83c129574194bea1ed036}{C\+O\+I\+LS}}\mbox{]}
+\item 
+volatile uint16\+\_\+t \mbox{\hyperlink{modbus_8c_a1ce032ccf63911f7f07ac8ebe4e90680}{Input\+Bits}} \mbox{[}\mbox{\hyperlink{group___insert_gaae865db01e31dbe4754638af380ff0d1}{I\+N\+P\+U\+T\+\_\+\+B\+I\+TS}}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{modbus_8c_a06fc87d81c62e9abb8790b6e5713c55b}\label{modbus_8c_a06fc87d81c62e9abb8790b6e5713c55b}} 
+\subsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+A\+X\+I\+M\+U\+M\+\_\+\+R\+E\+C\+E\+I\+V\+E\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+S\+I\+ZE@{M\+A\+X\+I\+M\+U\+M\+\_\+\+R\+E\+C\+E\+I\+V\+E\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+S\+I\+ZE}!modbus.\+c@{modbus.\+c}}\index{modbus.\+c@{modbus.\+c}!M\+A\+X\+I\+M\+U\+M\+\_\+\+R\+E\+C\+E\+I\+V\+E\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+S\+I\+ZE@{M\+A\+X\+I\+M\+U\+M\+\_\+\+R\+E\+C\+E\+I\+V\+E\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+S\+I\+ZE}}}\mbox{\Hypertarget{modbus_8c_a06fc87d81c62e9abb8790b6e5713c55ba0a7725b01850c37132ab05daf1d24a68}\label{modbus_8c_a06fc87d81c62e9abb8790b6e5713c55ba0a7725b01850c37132ab05daf1d24a68}} 
+M\+A\+X\+I\+M\+U\+M\+\_\+\+R\+E\+C\+E\+I\+V\+E\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+S\+I\+ZE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+A\+X\+I\+M\+U\+M\+\_\+\+R\+E\+S\+P\+O\+N\+S\+E\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+S\+I\+ZE@{M\+A\+X\+I\+M\+U\+M\+\_\+\+R\+E\+S\+P\+O\+N\+S\+E\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+S\+I\+ZE}!modbus.\+c@{modbus.\+c}}\index{modbus.\+c@{modbus.\+c}!M\+A\+X\+I\+M\+U\+M\+\_\+\+R\+E\+S\+P\+O\+N\+S\+E\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+S\+I\+ZE@{M\+A\+X\+I\+M\+U\+M\+\_\+\+R\+E\+S\+P\+O\+N\+S\+E\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+S\+I\+ZE}}}\mbox{\Hypertarget{modbus_8c_a06fc87d81c62e9abb8790b6e5713c55ba560b116c050820f6195fa81c2c7392b3}\label{modbus_8c_a06fc87d81c62e9abb8790b6e5713c55ba560b116c050820f6195fa81c2c7392b3}} 
+M\+A\+X\+I\+M\+U\+M\+\_\+\+R\+E\+S\+P\+O\+N\+S\+E\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+S\+I\+ZE&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{modbus_8c_a7849f12c334d43c63dc0faa7925fd13d}\label{modbus_8c_a7849f12c334d43c63dc0faa7925fd13d}} 
+\index{modbus.\+c@{modbus.\+c}!modbus\+\_\+byte\+\_\+received\+\_\+handler@{modbus\+\_\+byte\+\_\+received\+\_\+handler}}
+\index{modbus\+\_\+byte\+\_\+received\+\_\+handler@{modbus\+\_\+byte\+\_\+received\+\_\+handler}!modbus.\+c@{modbus.\+c}}
+\subsubsection{\texorpdfstring{modbus\+\_\+byte\+\_\+received\+\_\+handler()}{modbus\_byte\_received\_handler()}}
+{\footnotesize\ttfamily void modbus\+\_\+byte\+\_\+received\+\_\+handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{modbus_8c_aac9fdbe39faea07b27faa7856ea107f4}\label{modbus_8c_aac9fdbe39faea07b27faa7856ea107f4}} 
+\index{modbus.\+c@{modbus.\+c}!modbus\+\_\+clean\+\_\+all\+\_\+registers@{modbus\+\_\+clean\+\_\+all\+\_\+registers}}
+\index{modbus\+\_\+clean\+\_\+all\+\_\+registers@{modbus\+\_\+clean\+\_\+all\+\_\+registers}!modbus.\+c@{modbus.\+c}}
+\subsubsection{\texorpdfstring{modbus\+\_\+clean\+\_\+all\+\_\+registers()}{modbus\_clean\_all\_registers()}}
+{\footnotesize\ttfamily void modbus\+\_\+clean\+\_\+all\+\_\+registers (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{modbus_8c_ac2eb6e2b4b299bf220ad0eea4010aa3e}\label{modbus_8c_ac2eb6e2b4b299bf220ad0eea4010aa3e}} 
+\index{modbus.\+c@{modbus.\+c}!modbus\+\_\+close@{modbus\+\_\+close}}
+\index{modbus\+\_\+close@{modbus\+\_\+close}!modbus.\+c@{modbus.\+c}}
+\subsubsection{\texorpdfstring{modbus\+\_\+close()}{modbus\_close()}}
+{\footnotesize\ttfamily void modbus\+\_\+close (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{modbus_8c_a9061aa30b2ce6c6ee2948b4c99138f6d}\label{modbus_8c_a9061aa30b2ce6c6ee2948b4c99138f6d}} 
+\index{modbus.\+c@{modbus.\+c}!modbus\+\_\+get\+\_\+slave\+\_\+address@{modbus\+\_\+get\+\_\+slave\+\_\+address}}
+\index{modbus\+\_\+get\+\_\+slave\+\_\+address@{modbus\+\_\+get\+\_\+slave\+\_\+address}!modbus.\+c@{modbus.\+c}}
+\subsubsection{\texorpdfstring{modbus\+\_\+get\+\_\+slave\+\_\+address()}{modbus\_get\_slave\_address()}}
+{\footnotesize\ttfamily uint8\+\_\+t modbus\+\_\+get\+\_\+slave\+\_\+address (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{modbus_8c_a67d9839b8e221bcb53bbbb2ba59ff618}\label{modbus_8c_a67d9839b8e221bcb53bbbb2ba59ff618}} 
+\index{modbus.\+c@{modbus.\+c}!modbus\+\_\+init@{modbus\+\_\+init}}
+\index{modbus\+\_\+init@{modbus\+\_\+init}!modbus.\+c@{modbus.\+c}}
+\subsubsection{\texorpdfstring{modbus\+\_\+init()}{modbus\_init()}}
+{\footnotesize\ttfamily void modbus\+\_\+init (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{address }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{modbus_8c_a50003397da508d7f6703dd7ba3941d8e}\label{modbus_8c_a50003397da508d7f6703dd7ba3941d8e}} 
+\index{modbus.\+c@{modbus.\+c}!modbus\+\_\+process@{modbus\+\_\+process}}
+\index{modbus\+\_\+process@{modbus\+\_\+process}!modbus.\+c@{modbus.\+c}}
+\subsubsection{\texorpdfstring{modbus\+\_\+process()}{modbus\_process()}}
+{\footnotesize\ttfamily bool modbus\+\_\+process (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{modbus_8c_a30cba410a65e97e1465ff5e07c4cdccb}\label{modbus_8c_a30cba410a65e97e1465ff5e07c4cdccb}} 
+\index{modbus.\+c@{modbus.\+c}!modbus\+\_\+timer\+\_\+tick\+\_\+handler@{modbus\+\_\+timer\+\_\+tick\+\_\+handler}}
+\index{modbus\+\_\+timer\+\_\+tick\+\_\+handler@{modbus\+\_\+timer\+\_\+tick\+\_\+handler}!modbus.\+c@{modbus.\+c}}
+\subsubsection{\texorpdfstring{modbus\+\_\+timer\+\_\+tick\+\_\+handler()}{modbus\_timer\_tick\_handler()}}
+{\footnotesize\ttfamily void modbus\+\_\+timer\+\_\+tick\+\_\+handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{modbus_8c_a940a57060a62fef7a8a7d656bd06f147}\label{modbus_8c_a940a57060a62fef7a8a7d656bd06f147}} 
+\index{modbus.\+c@{modbus.\+c}!Coils@{Coils}}
+\index{Coils@{Coils}!modbus.\+c@{modbus.\+c}}
+\subsubsection{\texorpdfstring{Coils}{Coils}}
+{\footnotesize\ttfamily volatile uint16\+\_\+t Coils\mbox{[}\mbox{\hyperlink{group___insert_ga0b65fe24e4d83c129574194bea1ed036}{C\+O\+I\+LS}}\mbox{]}}
+
+\mbox{\Hypertarget{modbus_8c_aa49e3fbdb0dcc0c28c8a1682816b6d6e}\label{modbus_8c_aa49e3fbdb0dcc0c28c8a1682816b6d6e}} 
+\index{modbus.\+c@{modbus.\+c}!Holding\+Register@{Holding\+Register}}
+\index{Holding\+Register@{Holding\+Register}!modbus.\+c@{modbus.\+c}}
+\subsubsection{\texorpdfstring{Holding\+Register}{HoldingRegister}}
+{\footnotesize\ttfamily volatile uint16\+\_\+t Holding\+Register\mbox{[}\mbox{\hyperlink{group___insert_gae4693a6ca50104a719f8ed840bb419ac}{H\+O\+L\+D\+I\+N\+G\+\_\+\+R\+E\+G\+I\+S\+T\+ER}}\mbox{]}}
+
+\mbox{\Hypertarget{modbus_8c_a1ce032ccf63911f7f07ac8ebe4e90680}\label{modbus_8c_a1ce032ccf63911f7f07ac8ebe4e90680}} 
+\index{modbus.\+c@{modbus.\+c}!Input\+Bits@{Input\+Bits}}
+\index{Input\+Bits@{Input\+Bits}!modbus.\+c@{modbus.\+c}}
+\subsubsection{\texorpdfstring{Input\+Bits}{InputBits}}
+{\footnotesize\ttfamily volatile uint16\+\_\+t Input\+Bits\mbox{[}\mbox{\hyperlink{group___insert_gaae865db01e31dbe4754638af380ff0d1}{I\+N\+P\+U\+T\+\_\+\+B\+I\+TS}}\mbox{]}}
+
+\mbox{\Hypertarget{modbus_8c_a3de43cdc5f089d90d87a051f1b55100a}\label{modbus_8c_a3de43cdc5f089d90d87a051f1b55100a}} 
+\index{modbus.\+c@{modbus.\+c}!Input\+Register@{Input\+Register}}
+\index{Input\+Register@{Input\+Register}!modbus.\+c@{modbus.\+c}}
+\subsubsection{\texorpdfstring{Input\+Register}{InputRegister}}
+{\footnotesize\ttfamily volatile uint16\+\_\+t Input\+Register\mbox{[}\mbox{\hyperlink{group___insert_ga2f10b7e4e03726942f00d00c9888f2dc}{I\+N\+P\+U\+T\+\_\+\+R\+E\+G\+I\+S\+T\+ER}}\mbox{]}}
+

@@ -1,0 +1,68 @@
+This repo implementation of Modbus slave which can control DC motor. It is based on Mikroe development boards with S\+T\+M32\+F40x M\+CU.
+
+DC motor control supports features like motor speed, direction, str/stop, shortbrake and standby. All of this features can be achieved changing Modbus registers. Modbus register mapping is below\+:
+
+\tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ R\+E\+G.\+T\+Y\+PE  }&\textbf{ N\+A\+ME  }&\textbf{ D\+E\+S\+C\+R\+I\+P\+T\+I\+ON  }&\textbf{ V\+A\+L\+UE R\+A\+N\+GE  }&\textbf{ D\+E\+F\+A\+U\+LT V\+A\+L\+UE   }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ R\+E\+G.\+T\+Y\+PE  }&\textbf{ N\+A\+ME  }&\textbf{ D\+E\+S\+C\+R\+I\+P\+T\+I\+ON  }&\textbf{ V\+A\+L\+UE R\+A\+N\+GE  }&\textbf{ D\+E\+F\+A\+U\+LT V\+A\+L\+UE   }\\\cline{1-5}
+\endhead
+H.\+Register  &Speed  &Motor speed  &\mbox{[}0-\/200\mbox{]}  &0   \\\cline{1-5}
+Coil  &Direction  &1 = clockwise 0 = counter clockwise  &\mbox{[}0-\/1\mbox{]}  &1   \\\cline{1-5}
+Coil  &Stop \& Start  &1 = start 0 = stop  &\mbox{[}0-\/1\mbox{]}  &0   \\\cline{1-5}
+Coil  &Short Brake  &1 = active 0 = inactive  &\mbox{[}0-\/1\mbox{]}  &0   \\\cline{1-5}
+Coil  &Stand by  &1 = active 0 = inactive  &\mbox{[}0-\/1\mbox{]}  &0   \\\cline{1-5}
+\end{longtabu}
+
+
+R\+S-\/485 communiction interface settings are\+:
+\begin{DoxyItemize}
+\item Bits for second\+: 115200bps
+\item Data bits\+: 8
+\item Stop bits\+: 1
+\item Parity\+: none
+\item Timeout\+: 0.\+5 s -\/ could be lower, with this parameters is tested.
+\item Poll rate\+: 50 ms -\/ could be lower, with this parameters is tested.
+\end{DoxyItemize}
+
+\subsection*{Dependencies}
+
+\subparagraph*{HW}
+
+
+\begin{DoxyItemize}
+\item \href{https://www.mikroe.com/clicker-2-stm32f4}{\tt Clicker 2 for S\+T\+M32}
+\item \href{https://www.mikroe.com/rs485-33v-click}{\tt R\+S485 click}
+\item \href{https://www.mikroe.com/dc-motor-3-click}{\tt DC M\+O\+T\+OR 3 Click}
+\item \href{https://www.sparkfun.com/products/retired/12514}{\tt DC Motor Precision Gearmotor -\/ 45 R\+PM (6-\/12V)}. You can use any other DC motor which satisfies driver characteristics.
+\end{DoxyItemize}
+
+\subparagraph*{SW}
+
+
+\begin{DoxyItemize}
+\item \href{https://www.st.com/en/development-tools/stm32cubemx.html}{\tt S\+T\+M32\+Cube initialization code generator}
+\item \href{https://www.st.com/en/development-tools/sw4stm32.html}{\tt S\+W4\+S\+T\+M32}
+\item \href{https://download.mikroe.com/examples/starter-boards/clicker-2/stm32f4/clicker-2-stm32f4-mikrobootloader-usb-hid-v130.zip}{\tt U\+SB H\+ID bootloader for Clicker 2 board}
+\end{DoxyItemize}
+
+\subsection*{Example of Usage}
+
+\subparagraph*{Running}
+
+Default device addres is {\ttfamily 1} in this example and it has configured Modbus as it is described above.
+
+Use U\+SB H\+ID bootloader for Clicker 2 board or use \href{https://www.st.com/en/development-tools/st-link-v2.html}{\tt ST L\+I\+N\+K/\+V2 programmer} with appropriate software to programm file\+:
+
+{\ttfamily modbus-\/dc-\/motor-\/slave/\+Debug/modbus-\/dc-\/motor-\/slave.\+hex}
+
+\subparagraph*{Edit source}
+
+Import project into S\+W4\+S\+T\+M32 and insert changes. Minimal change that you can make is to change slave address changing this line {\ttfamily \#define S\+L\+A\+V\+E\+\_\+\+A\+D\+D\+R\+E\+SS 1}
+
+For further editing look at {\ttfamily doc} folder. 

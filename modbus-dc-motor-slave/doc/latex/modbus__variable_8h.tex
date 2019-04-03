@@ -1,0 +1,56 @@
+\hypertarget{modbus__variable_8h}{}\section{Dependencies/wolk-\/modbus-\/0.1.2/modbus\+\_\+rtu/modbus\+\_\+variable.h File Reference}
+\label{modbus__variable_8h}\index{Dependencies/wolk-\/modbus-\/0.\+1.\+2/modbus\+\_\+rtu/modbus\+\_\+variable.\+h@{Dependencies/wolk-\/modbus-\/0.\+1.\+2/modbus\+\_\+rtu/modbus\+\_\+variable.\+h}}
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structmodbus__variable__t}{modbus\+\_\+variable\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structmodbus__variable__32__t}{modbus\+\_\+variable\+\_\+32\+\_\+t}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{modbus__variable_8h_a84e7ba59e61fd5fee9349449df87739a}{modbus\+\_\+variable\+\_\+init}} (\mbox{\hyperlink{structmodbus__variable__t}{modbus\+\_\+variable\+\_\+t}} $\ast$modbus\+\_\+variable, volatile uint16\+\_\+t $\ast$address)
+\item 
+uint16\+\_\+t \mbox{\hyperlink{modbus__variable_8h_a6fa8565ebc5e59ff34a5eb34c0e89b8f}{modbus\+\_\+variable\+\_\+get\+\_\+value}} (\mbox{\hyperlink{structmodbus__variable__t}{modbus\+\_\+variable\+\_\+t}} $\ast$modbus\+\_\+variable)
+\item 
+void \mbox{\hyperlink{modbus__variable_8h_a393e71af013d703629686bded8e3a1ad}{modbus\+\_\+variable\+\_\+set\+\_\+value}} (\mbox{\hyperlink{structmodbus__variable__t}{modbus\+\_\+variable\+\_\+t}} $\ast$modbus\+\_\+variable, uint16\+\_\+t value)
+\item 
+void \mbox{\hyperlink{modbus__variable_8h_a0fd2c583eb9a507d0bab396f2133760e}{modbus\+\_\+variable\+\_\+increment\+\_\+value}} (\mbox{\hyperlink{structmodbus__variable__t}{modbus\+\_\+variable\+\_\+t}} $\ast$modbus\+\_\+variable)
+\item 
+void \mbox{\hyperlink{modbus__variable_8h_aecd7481d9fd379892bcaa12b47d1c730}{modbus\+\_\+variable\+\_\+decrement\+\_\+value}} (\mbox{\hyperlink{structmodbus__variable__t}{modbus\+\_\+variable\+\_\+t}} $\ast$modbus\+\_\+variable)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{modbus__variable_8h_aecd7481d9fd379892bcaa12b47d1c730}\label{modbus__variable_8h_aecd7481d9fd379892bcaa12b47d1c730}} 
+\index{modbus\+\_\+variable.\+h@{modbus\+\_\+variable.\+h}!modbus\+\_\+variable\+\_\+decrement\+\_\+value@{modbus\+\_\+variable\+\_\+decrement\+\_\+value}}
+\index{modbus\+\_\+variable\+\_\+decrement\+\_\+value@{modbus\+\_\+variable\+\_\+decrement\+\_\+value}!modbus\+\_\+variable.\+h@{modbus\+\_\+variable.\+h}}
+\subsubsection{\texorpdfstring{modbus\+\_\+variable\+\_\+decrement\+\_\+value()}{modbus\_variable\_decrement\_value()}}
+{\footnotesize\ttfamily void modbus\+\_\+variable\+\_\+decrement\+\_\+value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmodbus__variable__t}{modbus\+\_\+variable\+\_\+t}} $\ast$}]{modbus\+\_\+variable }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{modbus__variable_8h_a6fa8565ebc5e59ff34a5eb34c0e89b8f}\label{modbus__variable_8h_a6fa8565ebc5e59ff34a5eb34c0e89b8f}} 
+\index{modbus\+\_\+variable.\+h@{modbus\+\_\+variable.\+h}!modbus\+\_\+variable\+\_\+get\+\_\+value@{modbus\+\_\+variable\+\_\+get\+\_\+value}}
+\index{modbus\+\_\+variable\+\_\+get\+\_\+value@{modbus\+\_\+variable\+\_\+get\+\_\+value}!modbus\+\_\+variable.\+h@{modbus\+\_\+variable.\+h}}
+\subsubsection{\texorpdfstring{modbus\+\_\+variable\+\_\+get\+\_\+value()}{modbus\_variable\_get\_value()}}
+{\footnotesize\ttfamily uint16\+\_\+t modbus\+\_\+variable\+\_\+get\+\_\+value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmodbus__variable__t}{modbus\+\_\+variable\+\_\+t}} $\ast$}]{modbus\+\_\+variable }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{modbus__variable_8h_a0fd2c583eb9a507d0bab396f2133760e}\label{modbus__variable_8h_a0fd2c583eb9a507d0bab396f2133760e}} 
+\index{modbus\+\_\+variable.\+h@{modbus\+\_\+variable.\+h}!modbus\+\_\+variable\+\_\+increment\+\_\+value@{modbus\+\_\+variable\+\_\+increment\+\_\+value}}
+\index{modbus\+\_\+variable\+\_\+increment\+\_\+value@{modbus\+\_\+variable\+\_\+increment\+\_\+value}!modbus\+\_\+variable.\+h@{modbus\+\_\+variable.\+h}}
+\subsubsection{\texorpdfstring{modbus\+\_\+variable\+\_\+increment\+\_\+value()}{modbus\_variable\_increment\_value()}}
+{\footnotesize\ttfamily void modbus\+\_\+variable\+\_\+increment\+\_\+value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmodbus__variable__t}{modbus\+\_\+variable\+\_\+t}} $\ast$}]{modbus\+\_\+variable }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{modbus__variable_8h_a84e7ba59e61fd5fee9349449df87739a}\label{modbus__variable_8h_a84e7ba59e61fd5fee9349449df87739a}} 
+\index{modbus\+\_\+variable.\+h@{modbus\+\_\+variable.\+h}!modbus\+\_\+variable\+\_\+init@{modbus\+\_\+variable\+\_\+init}}
+\index{modbus\+\_\+variable\+\_\+init@{modbus\+\_\+variable\+\_\+init}!modbus\+\_\+variable.\+h@{modbus\+\_\+variable.\+h}}
+\subsubsection{\texorpdfstring{modbus\+\_\+variable\+\_\+init()}{modbus\_variable\_init()}}
+{\footnotesize\ttfamily void modbus\+\_\+variable\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmodbus__variable__t}{modbus\+\_\+variable\+\_\+t}} $\ast$}]{modbus\+\_\+variable,  }\item[{volatile uint16\+\_\+t $\ast$}]{address }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{modbus__variable_8h_a393e71af013d703629686bded8e3a1ad}\label{modbus__variable_8h_a393e71af013d703629686bded8e3a1ad}} 
+\index{modbus\+\_\+variable.\+h@{modbus\+\_\+variable.\+h}!modbus\+\_\+variable\+\_\+set\+\_\+value@{modbus\+\_\+variable\+\_\+set\+\_\+value}}
+\index{modbus\+\_\+variable\+\_\+set\+\_\+value@{modbus\+\_\+variable\+\_\+set\+\_\+value}!modbus\+\_\+variable.\+h@{modbus\+\_\+variable.\+h}}
+\subsubsection{\texorpdfstring{modbus\+\_\+variable\+\_\+set\+\_\+value()}{modbus\_variable\_set\_value()}}
+{\footnotesize\ttfamily void modbus\+\_\+variable\+\_\+set\+\_\+value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmodbus__variable__t}{modbus\+\_\+variable\+\_\+t}} $\ast$}]{modbus\+\_\+variable,  }\item[{uint16\+\_\+t}]{value }\end{DoxyParamCaption})}
+

@@ -52,7 +52,7 @@ UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN PV */
 /* Private variables ---------------------------------------------------------*/
-#define SLAVE_ADDRESS 2
+#define SLAVE_ADDRESS 1
 
 static uint16_t motor_speed_current = 0;
 static bool motor_direction_current = true;

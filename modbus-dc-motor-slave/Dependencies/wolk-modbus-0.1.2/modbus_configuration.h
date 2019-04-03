@@ -23,7 +23,7 @@
 /** Number of Input Register */
 #define INPUT_REGISTER 0
 /** Number of Coils */
-#define COILS 3
+#define COILS 4
 /** Number of Input Bits */
 #define INPUT_BITS 0
 

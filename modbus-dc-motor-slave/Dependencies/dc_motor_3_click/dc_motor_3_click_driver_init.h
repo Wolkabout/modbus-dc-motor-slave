@@ -8,6 +8,8 @@
 #ifndef DC_MOTOR_3_CLICK_DRIVER_INIT_H_
 #define DC_MOTOR_3_CLICK_DRIVER_INIT_H_
 
+#include "dc_motor_3_click.h"
+
 /**
  * @brief 		Control signal input 1. Together with in2 it is used for set
  * motor direction or to stop it.

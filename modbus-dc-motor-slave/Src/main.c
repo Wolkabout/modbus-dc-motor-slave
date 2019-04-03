@@ -55,7 +55,7 @@ UART_HandleTypeDef huart2;
 #define SLAVE_ADDRESS 2
 
 static uint16_t motor_speed_current = 0;
-static bool motor_direction_current = false;
+static bool motor_direction_current = true;
 static bool	motor_stop_start_current = false;
 static bool motor_short_brake_current = false;
 static bool motor_stand_by_current = false;
@@ -73,6 +73,8 @@ void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
 
 /* USER CODE BEGIN PFP */
 /* Private function prototypes -----------------------------------------------*/
+static void motor_control_init(void);
+static void motor_process(void);
 
 /* USER CODE END PFP */
 
@@ -134,6 +136,10 @@ int main(void)
   modbus_variable_set_value(&modbus_variables_map.stop_start, motor_stop_start_current);
   modbus_variable_set_value(&modbus_variables_map.short_brake, motor_short_brake_current);
   modbus_variable_set_value(&modbus_variables_map.stand_by, motor_stand_by_current);
+
+  dc_motor3_init();
+  motor_control_init();
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -142,6 +148,7 @@ int main(void)
   {
 	  modbus_process();
 
+	  motor_process();
   /* USER CODE END WHILE */
 
   /* USER CODE BEGIN 3 */
@@ -443,6 +450,72 @@ static void MX_GPIO_Init(void)
 
 /* USER CODE BEGIN 4 */
 
+static void motor_control_init(void)
+{
+	motor_speed_current = 0;
+	motor_direction_current = true;
+	motor_stop_start_current = false;
+	motor_short_brake_current = false;
+	motor_stand_by_current = false;
+
+	dc_motor3_stop();
+}
+
+static void motor_process(void)
+{
+	if( motor_speed_current != HoldingRegister[SPEED] )
+	{
+		motor_speed_current = HoldingRegister[SPEED];
+		dc_motor3_set_speed(motor_speed_current);
+	}
+	if( motor_direction_current != Coils[DIRECTION] )
+	{
+		motor_direction_current = Coils[DIRECTION];
+
+		motor_direction_current == true ? dc_motor3_clockwise() : dc_motor3_counter_clockwise();
+	}
+	if( motor_short_brake_current != Coils[SHORT_BRAKE] )
+	{
+		motor_short_brake_current = Coils[SHORT_BRAKE];
+
+		motor_short_brake_current == true ? dc_motor3_short_brake() : NULL;
+		Coils[STOP_START] = motor_stop_start_current = true;
+		Coils[SHORT_BRAKE] = motor_short_brake_current = false;
+	}
+	if( motor_stand_by_current != Coils[STAND_BY] )
+	{
+		motor_stand_by_current = Coils[STAND_BY];
+
+		motor_stand_by_current == true ? dc_motor3_standby() : NULL;
+		Coils[STOP_START] = motor_stop_start_current = true;
+		Coils[STAND_BY] = motor_stand_by_current = false;
+	}
+
+	if( motor_stop_start_current != Coils[STOP_START] )
+	{
+		motor_stop_start_current = Coils[STOP_START];
+
+		if(!motor_stop_start_current)
+		{
+			if(motor_direction_current)
+			{
+				dc_motor3_set_speed(motor_speed_current);
+				dc_motor3_clockwise();
+			}
+			else
+			{
+				dc_motor3_set_speed(motor_speed_current);
+				dc_motor3_counter_clockwise();
+			}
+		}
+		else
+		{
+			dc_motor3_stop();
+			dc_motor3_set_speed(0);
+		}
+	}
+
+}
 /* USER CODE END 4 */
 
 /**

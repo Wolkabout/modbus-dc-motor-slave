@@ -53,6 +53,12 @@ UART_HandleTypeDef huart2;
 /* USER CODE BEGIN PV */
 /* Private variables ---------------------------------------------------------*/
 #define SLAVE_ADDRESS 2
+
+static uint16_t motor_speed_current = 0;
+static bool motor_direction_current = false;
+static bool	motor_stop_start_current = false;
+static bool motor_short_brake_current = false;
+static bool motor_stand_by_current = false;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -123,7 +129,11 @@ int main(void)
   //Init your own registers
   modbus_register_mapping_init();
 
-  modbus_variable_set_value(&modbus_variables_map.speed[0], 50);
+  modbus_variable_set_value(&modbus_variables_map.speed[0], motor_speed_current);
+  modbus_variable_set_value(&modbus_variables_map.direction, motor_direction_current);
+  modbus_variable_set_value(&modbus_variables_map.stop_start, motor_stop_start_current);
+  modbus_variable_set_value(&modbus_variables_map.short_brake, motor_short_brake_current);
+  modbus_variable_set_value(&modbus_variables_map.stand_by, motor_stand_by_current);
   /* USER CODE END 2 */
 
   /* Infinite loop */

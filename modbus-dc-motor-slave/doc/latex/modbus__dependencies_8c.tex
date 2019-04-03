@@ -1,0 +1,137 @@
+\hypertarget{modbus__dependencies_8c}{}\section{Dependencies/wolk-\/modbus-\/0.1.2/modbus\+\_\+rtu/modbus\+\_\+dependencies.c File Reference}
+\label{modbus__dependencies_8c}\index{Dependencies/wolk-\/modbus-\/0.\+1.\+2/modbus\+\_\+rtu/modbus\+\_\+dependencies.\+c@{Dependencies/wolk-\/modbus-\/0.\+1.\+2/modbus\+\_\+rtu/modbus\+\_\+dependencies.\+c}}
+{\ttfamily \#include \char`\"{}modbus\+\_\+dependencies.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{modbus__dependencies_8c_a30cba410a65e97e1465ff5e07c4cdccb}{modbus\+\_\+timer\+\_\+tick\+\_\+handler}} (void)
+\item 
+void \mbox{\hyperlink{modbus__dependencies_8c_a7849f12c334d43c63dc0faa7925fd13d}{modbus\+\_\+byte\+\_\+received\+\_\+handler}} (void)
+\item 
+void \mbox{\hyperlink{modbus__dependencies_8c_a4c6675c5e04c03db716ff0b0a1ec1e86}{rx\+\_\+cb\+\_\+modbus\+\_\+dependencies\+\_\+usart}} (void)
+\item 
+void \mbox{\hyperlink{modbus__dependencies_8c_abe85f9a13224c13162f7bd21b27cbd5c}{tx\+\_\+cb\+\_\+modbus\+\_\+dependencies\+\_\+usart}} (void)
+\item 
+void \mbox{\hyperlink{modbus__dependencies_8c_abe9f3ba8150b828568384603c4691b7a}{modbus\+\_\+dependencies\+\_\+usart\+\_\+open}} (void)
+\item 
+void \mbox{\hyperlink{modbus__dependencies_8c_a7120de8137267cfc3030395ec3b99829}{modbus\+\_\+dependencies\+\_\+usart\+\_\+close}} (void)
+\item 
+void \mbox{\hyperlink{modbus__dependencies_8c_abdaf5a0d1bc05e3aa854828e0a39a736}{modbus\+\_\+dependencies\+\_\+usart\+\_\+put\+\_\+byte}} (uint8\+\_\+t byte)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{modbus__dependencies_8c_ab03c439802ab99e453b5a1cf2fcf86f2}{modbus\+\_\+dependencies\+\_\+usart\+\_\+get\+\_\+byte}} (void)
+\item 
+bool \mbox{\hyperlink{modbus__dependencies_8c_ae99e9c3b57fdfbb465082f5fd34d8b9a}{modbus\+\_\+dependencies\+\_\+usart\+\_\+busy}} (void)
+\item 
+void \mbox{\hyperlink{modbus__dependencies_8c_ad4de4585363cc219abc2d4358301281e}{modbus\+\_\+dependencies\+\_\+set\+\_\+direction\+\_\+pin}} (bool send)
+\item 
+void \mbox{\hyperlink{modbus__dependencies_8c_a27f7086c0b6278e54054134bc240ff9c}{modbus\+\_\+dependencies\+\_\+timer\+\_\+callback}} (void)
+\item 
+void \mbox{\hyperlink{modbus__dependencies_8c_a00bf9e70b8ce594687042d68a23a6e2b}{modbus\+\_\+dependencies\+\_\+timer\+\_\+start}} (void)
+\item 
+void \mbox{\hyperlink{modbus__dependencies_8c_a72fa6937f626de24d02e4589503dcc68}{modbus\+\_\+dependencies\+\_\+timer\+\_\+stop}} (void)
+\item 
+void \mbox{\hyperlink{modbus__dependencies_8c_a340232cd3455b96a342ad9e52412498b}{modbus\+\_\+dependencies\+\_\+init}} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+volatile bool \mbox{\hyperlink{modbus__dependencies_8c_a6bbc0602e198f1d68812b7e748d6d699}{is\+\_\+byte\+\_\+sent}} = false
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{modbus__dependencies_8c_a7849f12c334d43c63dc0faa7925fd13d}\label{modbus__dependencies_8c_a7849f12c334d43c63dc0faa7925fd13d}} 
+\index{modbus\+\_\+dependencies.\+c@{modbus\+\_\+dependencies.\+c}!modbus\+\_\+byte\+\_\+received\+\_\+handler@{modbus\+\_\+byte\+\_\+received\+\_\+handler}}
+\index{modbus\+\_\+byte\+\_\+received\+\_\+handler@{modbus\+\_\+byte\+\_\+received\+\_\+handler}!modbus\+\_\+dependencies.\+c@{modbus\+\_\+dependencies.\+c}}
+\subsubsection{\texorpdfstring{modbus\+\_\+byte\+\_\+received\+\_\+handler()}{modbus\_byte\_received\_handler()}}
+{\footnotesize\ttfamily void modbus\+\_\+byte\+\_\+received\+\_\+handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{modbus__dependencies_8c_a340232cd3455b96a342ad9e52412498b}\label{modbus__dependencies_8c_a340232cd3455b96a342ad9e52412498b}} 
+\index{modbus\+\_\+dependencies.\+c@{modbus\+\_\+dependencies.\+c}!modbus\+\_\+dependencies\+\_\+init@{modbus\+\_\+dependencies\+\_\+init}}
+\index{modbus\+\_\+dependencies\+\_\+init@{modbus\+\_\+dependencies\+\_\+init}!modbus\+\_\+dependencies.\+c@{modbus\+\_\+dependencies.\+c}}
+\subsubsection{\texorpdfstring{modbus\+\_\+dependencies\+\_\+init()}{modbus\_dependencies\_init()}}
+{\footnotesize\ttfamily void modbus\+\_\+dependencies\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{modbus__dependencies_8c_ad4de4585363cc219abc2d4358301281e}\label{modbus__dependencies_8c_ad4de4585363cc219abc2d4358301281e}} 
+\index{modbus\+\_\+dependencies.\+c@{modbus\+\_\+dependencies.\+c}!modbus\+\_\+dependencies\+\_\+set\+\_\+direction\+\_\+pin@{modbus\+\_\+dependencies\+\_\+set\+\_\+direction\+\_\+pin}}
+\index{modbus\+\_\+dependencies\+\_\+set\+\_\+direction\+\_\+pin@{modbus\+\_\+dependencies\+\_\+set\+\_\+direction\+\_\+pin}!modbus\+\_\+dependencies.\+c@{modbus\+\_\+dependencies.\+c}}
+\subsubsection{\texorpdfstring{modbus\+\_\+dependencies\+\_\+set\+\_\+direction\+\_\+pin()}{modbus\_dependencies\_set\_direction\_pin()}}
+{\footnotesize\ttfamily void modbus\+\_\+dependencies\+\_\+set\+\_\+direction\+\_\+pin (\begin{DoxyParamCaption}\item[{bool}]{send }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{modbus__dependencies_8c_a27f7086c0b6278e54054134bc240ff9c}\label{modbus__dependencies_8c_a27f7086c0b6278e54054134bc240ff9c}} 
+\index{modbus\+\_\+dependencies.\+c@{modbus\+\_\+dependencies.\+c}!modbus\+\_\+dependencies\+\_\+timer\+\_\+callback@{modbus\+\_\+dependencies\+\_\+timer\+\_\+callback}}
+\index{modbus\+\_\+dependencies\+\_\+timer\+\_\+callback@{modbus\+\_\+dependencies\+\_\+timer\+\_\+callback}!modbus\+\_\+dependencies.\+c@{modbus\+\_\+dependencies.\+c}}
+\subsubsection{\texorpdfstring{modbus\+\_\+dependencies\+\_\+timer\+\_\+callback()}{modbus\_dependencies\_timer\_callback()}}
+{\footnotesize\ttfamily void modbus\+\_\+dependencies\+\_\+timer\+\_\+callback (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{modbus__dependencies_8c_a00bf9e70b8ce594687042d68a23a6e2b}\label{modbus__dependencies_8c_a00bf9e70b8ce594687042d68a23a6e2b}} 
+\index{modbus\+\_\+dependencies.\+c@{modbus\+\_\+dependencies.\+c}!modbus\+\_\+dependencies\+\_\+timer\+\_\+start@{modbus\+\_\+dependencies\+\_\+timer\+\_\+start}}
+\index{modbus\+\_\+dependencies\+\_\+timer\+\_\+start@{modbus\+\_\+dependencies\+\_\+timer\+\_\+start}!modbus\+\_\+dependencies.\+c@{modbus\+\_\+dependencies.\+c}}
+\subsubsection{\texorpdfstring{modbus\+\_\+dependencies\+\_\+timer\+\_\+start()}{modbus\_dependencies\_timer\_start()}}
+{\footnotesize\ttfamily void modbus\+\_\+dependencies\+\_\+timer\+\_\+start (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{modbus__dependencies_8c_a72fa6937f626de24d02e4589503dcc68}\label{modbus__dependencies_8c_a72fa6937f626de24d02e4589503dcc68}} 
+\index{modbus\+\_\+dependencies.\+c@{modbus\+\_\+dependencies.\+c}!modbus\+\_\+dependencies\+\_\+timer\+\_\+stop@{modbus\+\_\+dependencies\+\_\+timer\+\_\+stop}}
+\index{modbus\+\_\+dependencies\+\_\+timer\+\_\+stop@{modbus\+\_\+dependencies\+\_\+timer\+\_\+stop}!modbus\+\_\+dependencies.\+c@{modbus\+\_\+dependencies.\+c}}
+\subsubsection{\texorpdfstring{modbus\+\_\+dependencies\+\_\+timer\+\_\+stop()}{modbus\_dependencies\_timer\_stop()}}
+{\footnotesize\ttfamily void modbus\+\_\+dependencies\+\_\+timer\+\_\+stop (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{modbus__dependencies_8c_ae99e9c3b57fdfbb465082f5fd34d8b9a}\label{modbus__dependencies_8c_ae99e9c3b57fdfbb465082f5fd34d8b9a}} 
+\index{modbus\+\_\+dependencies.\+c@{modbus\+\_\+dependencies.\+c}!modbus\+\_\+dependencies\+\_\+usart\+\_\+busy@{modbus\+\_\+dependencies\+\_\+usart\+\_\+busy}}
+\index{modbus\+\_\+dependencies\+\_\+usart\+\_\+busy@{modbus\+\_\+dependencies\+\_\+usart\+\_\+busy}!modbus\+\_\+dependencies.\+c@{modbus\+\_\+dependencies.\+c}}
+\subsubsection{\texorpdfstring{modbus\+\_\+dependencies\+\_\+usart\+\_\+busy()}{modbus\_dependencies\_usart\_busy()}}
+{\footnotesize\ttfamily bool modbus\+\_\+dependencies\+\_\+usart\+\_\+busy (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{modbus__dependencies_8c_a7120de8137267cfc3030395ec3b99829}\label{modbus__dependencies_8c_a7120de8137267cfc3030395ec3b99829}} 
+\index{modbus\+\_\+dependencies.\+c@{modbus\+\_\+dependencies.\+c}!modbus\+\_\+dependencies\+\_\+usart\+\_\+close@{modbus\+\_\+dependencies\+\_\+usart\+\_\+close}}
+\index{modbus\+\_\+dependencies\+\_\+usart\+\_\+close@{modbus\+\_\+dependencies\+\_\+usart\+\_\+close}!modbus\+\_\+dependencies.\+c@{modbus\+\_\+dependencies.\+c}}
+\subsubsection{\texorpdfstring{modbus\+\_\+dependencies\+\_\+usart\+\_\+close()}{modbus\_dependencies\_usart\_close()}}
+{\footnotesize\ttfamily void modbus\+\_\+dependencies\+\_\+usart\+\_\+close (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{modbus__dependencies_8c_ab03c439802ab99e453b5a1cf2fcf86f2}\label{modbus__dependencies_8c_ab03c439802ab99e453b5a1cf2fcf86f2}} 
+\index{modbus\+\_\+dependencies.\+c@{modbus\+\_\+dependencies.\+c}!modbus\+\_\+dependencies\+\_\+usart\+\_\+get\+\_\+byte@{modbus\+\_\+dependencies\+\_\+usart\+\_\+get\+\_\+byte}}
+\index{modbus\+\_\+dependencies\+\_\+usart\+\_\+get\+\_\+byte@{modbus\+\_\+dependencies\+\_\+usart\+\_\+get\+\_\+byte}!modbus\+\_\+dependencies.\+c@{modbus\+\_\+dependencies.\+c}}
+\subsubsection{\texorpdfstring{modbus\+\_\+dependencies\+\_\+usart\+\_\+get\+\_\+byte()}{modbus\_dependencies\_usart\_get\_byte()}}
+{\footnotesize\ttfamily uint8\+\_\+t modbus\+\_\+dependencies\+\_\+usart\+\_\+get\+\_\+byte (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{modbus__dependencies_8c_abe9f3ba8150b828568384603c4691b7a}\label{modbus__dependencies_8c_abe9f3ba8150b828568384603c4691b7a}} 
+\index{modbus\+\_\+dependencies.\+c@{modbus\+\_\+dependencies.\+c}!modbus\+\_\+dependencies\+\_\+usart\+\_\+open@{modbus\+\_\+dependencies\+\_\+usart\+\_\+open}}
+\index{modbus\+\_\+dependencies\+\_\+usart\+\_\+open@{modbus\+\_\+dependencies\+\_\+usart\+\_\+open}!modbus\+\_\+dependencies.\+c@{modbus\+\_\+dependencies.\+c}}
+\subsubsection{\texorpdfstring{modbus\+\_\+dependencies\+\_\+usart\+\_\+open()}{modbus\_dependencies\_usart\_open()}}
+{\footnotesize\ttfamily void modbus\+\_\+dependencies\+\_\+usart\+\_\+open (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{modbus__dependencies_8c_abdaf5a0d1bc05e3aa854828e0a39a736}\label{modbus__dependencies_8c_abdaf5a0d1bc05e3aa854828e0a39a736}} 
+\index{modbus\+\_\+dependencies.\+c@{modbus\+\_\+dependencies.\+c}!modbus\+\_\+dependencies\+\_\+usart\+\_\+put\+\_\+byte@{modbus\+\_\+dependencies\+\_\+usart\+\_\+put\+\_\+byte}}
+\index{modbus\+\_\+dependencies\+\_\+usart\+\_\+put\+\_\+byte@{modbus\+\_\+dependencies\+\_\+usart\+\_\+put\+\_\+byte}!modbus\+\_\+dependencies.\+c@{modbus\+\_\+dependencies.\+c}}
+\subsubsection{\texorpdfstring{modbus\+\_\+dependencies\+\_\+usart\+\_\+put\+\_\+byte()}{modbus\_dependencies\_usart\_put\_byte()}}
+{\footnotesize\ttfamily void modbus\+\_\+dependencies\+\_\+usart\+\_\+put\+\_\+byte (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{byte }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{modbus__dependencies_8c_a30cba410a65e97e1465ff5e07c4cdccb}\label{modbus__dependencies_8c_a30cba410a65e97e1465ff5e07c4cdccb}} 
+\index{modbus\+\_\+dependencies.\+c@{modbus\+\_\+dependencies.\+c}!modbus\+\_\+timer\+\_\+tick\+\_\+handler@{modbus\+\_\+timer\+\_\+tick\+\_\+handler}}
+\index{modbus\+\_\+timer\+\_\+tick\+\_\+handler@{modbus\+\_\+timer\+\_\+tick\+\_\+handler}!modbus\+\_\+dependencies.\+c@{modbus\+\_\+dependencies.\+c}}
+\subsubsection{\texorpdfstring{modbus\+\_\+timer\+\_\+tick\+\_\+handler()}{modbus\_timer\_tick\_handler()}}
+{\footnotesize\ttfamily void modbus\+\_\+timer\+\_\+tick\+\_\+handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{modbus__dependencies_8c_a4c6675c5e04c03db716ff0b0a1ec1e86}\label{modbus__dependencies_8c_a4c6675c5e04c03db716ff0b0a1ec1e86}} 
+\index{modbus\+\_\+dependencies.\+c@{modbus\+\_\+dependencies.\+c}!rx\+\_\+cb\+\_\+modbus\+\_\+dependencies\+\_\+usart@{rx\+\_\+cb\+\_\+modbus\+\_\+dependencies\+\_\+usart}}
+\index{rx\+\_\+cb\+\_\+modbus\+\_\+dependencies\+\_\+usart@{rx\+\_\+cb\+\_\+modbus\+\_\+dependencies\+\_\+usart}!modbus\+\_\+dependencies.\+c@{modbus\+\_\+dependencies.\+c}}
+\subsubsection{\texorpdfstring{rx\+\_\+cb\+\_\+modbus\+\_\+dependencies\+\_\+usart()}{rx\_cb\_modbus\_dependencies\_usart()}}
+{\footnotesize\ttfamily void rx\+\_\+cb\+\_\+modbus\+\_\+dependencies\+\_\+usart (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{modbus__dependencies_8c_abe85f9a13224c13162f7bd21b27cbd5c}\label{modbus__dependencies_8c_abe85f9a13224c13162f7bd21b27cbd5c}} 
+\index{modbus\+\_\+dependencies.\+c@{modbus\+\_\+dependencies.\+c}!tx\+\_\+cb\+\_\+modbus\+\_\+dependencies\+\_\+usart@{tx\+\_\+cb\+\_\+modbus\+\_\+dependencies\+\_\+usart}}
+\index{tx\+\_\+cb\+\_\+modbus\+\_\+dependencies\+\_\+usart@{tx\+\_\+cb\+\_\+modbus\+\_\+dependencies\+\_\+usart}!modbus\+\_\+dependencies.\+c@{modbus\+\_\+dependencies.\+c}}
+\subsubsection{\texorpdfstring{tx\+\_\+cb\+\_\+modbus\+\_\+dependencies\+\_\+usart()}{tx\_cb\_modbus\_dependencies\_usart()}}
+{\footnotesize\ttfamily void tx\+\_\+cb\+\_\+modbus\+\_\+dependencies\+\_\+usart (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{modbus__dependencies_8c_a6bbc0602e198f1d68812b7e748d6d699}\label{modbus__dependencies_8c_a6bbc0602e198f1d68812b7e748d6d699}} 
+\index{modbus\+\_\+dependencies.\+c@{modbus\+\_\+dependencies.\+c}!is\+\_\+byte\+\_\+sent@{is\+\_\+byte\+\_\+sent}}
+\index{is\+\_\+byte\+\_\+sent@{is\+\_\+byte\+\_\+sent}!modbus\+\_\+dependencies.\+c@{modbus\+\_\+dependencies.\+c}}
+\subsubsection{\texorpdfstring{is\+\_\+byte\+\_\+sent}{is\_byte\_sent}}
+{\footnotesize\ttfamily volatile bool is\+\_\+byte\+\_\+sent = false}
+

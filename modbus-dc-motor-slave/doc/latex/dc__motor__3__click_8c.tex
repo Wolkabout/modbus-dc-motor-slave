@@ -1,0 +1,152 @@
+\hypertarget{dc__motor__3__click_8c}{}\section{Dependencies/dc\+\_\+motor\+\_\+3\+\_\+click/driver/dc\+\_\+motor\+\_\+3\+\_\+click.c File Reference}
+\label{dc__motor__3__click_8c}\index{Dependencies/dc\+\_\+motor\+\_\+3\+\_\+click/driver/dc\+\_\+motor\+\_\+3\+\_\+click.\+c@{Dependencies/dc\+\_\+motor\+\_\+3\+\_\+click/driver/dc\+\_\+motor\+\_\+3\+\_\+click.\+c}}
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}dc\+\_\+motor\+\_\+3\+\_\+click.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}dc\+\_\+motor\+\_\+3\+\_\+click\+\_\+driver\+\_\+init.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{dc__motor__3__click_8c_a735844dc27603572182e7ba0a87f9ac4}{dc\+\_\+motor3\+\_\+init}} (void)
+\begin{DoxyCompactList}\small\item\em DC motor initialization. Set initial direction and set speed to zero by controlling G\+P\+IO\textquotesingle{}s and P\+WM. Initially motor will be stopped. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{dc__motor__3__click_8c_a940b59258257a43b9107509af01a11e3}{dc\+\_\+motor3\+\_\+set\+\_\+speed}} (uint16\+\_\+t speed)
+\begin{DoxyCompactList}\small\item\em Control DC motor speed. This is related to used DC motor driver. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{dc__motor__3__click_8c_a3e3d5b9b548d99ba21c886d5226c2a08}{dc\+\_\+motor3\+\_\+short\+\_\+brake}} ()
+\begin{DoxyCompactList}\small\item\em DC motor short brake mode. This function will cause immediately stop. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{dc__motor__3__click_8c_a8d5f5b3124ac09eba3d74abea88589d2}{dc\+\_\+motor3\+\_\+stop}} ()
+\begin{DoxyCompactList}\small\item\em DC motor stop mode. This function will cause normal stop. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{dc__motor__3__click_8c_ab08c671126dc1d1a42d4c9f341e66ba9}{dc\+\_\+motor3\+\_\+standby}} ()
+\begin{DoxyCompactList}\small\item\em DC motor stop mode. This function will cause soft stop. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{dc__motor__3__click_8c_ab458adc240afbdbdf77cd7eefac690f4}{dc\+\_\+motor3\+\_\+clockwise}} ()
+\begin{DoxyCompactList}\small\item\em Set DC motor direction like clockwise. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{dc__motor__3__click_8c_af6c5a21a8340b17b7410b4a67b9a5ffd}{dc\+\_\+motor3\+\_\+counter\+\_\+clockwise}} ()
+\begin{DoxyCompactList}\small\item\em Set DC motor direction opposite of clockwise which is called counterclockwise or anticlockwise. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{dc__motor__3__click_8c_ab458adc240afbdbdf77cd7eefac690f4}\label{dc__motor__3__click_8c_ab458adc240afbdbdf77cd7eefac690f4}} 
+\index{dc\+\_\+motor\+\_\+3\+\_\+click.\+c@{dc\+\_\+motor\+\_\+3\+\_\+click.\+c}!dc\+\_\+motor3\+\_\+clockwise@{dc\+\_\+motor3\+\_\+clockwise}}
+\index{dc\+\_\+motor3\+\_\+clockwise@{dc\+\_\+motor3\+\_\+clockwise}!dc\+\_\+motor\+\_\+3\+\_\+click.\+c@{dc\+\_\+motor\+\_\+3\+\_\+click.\+c}}
+\subsubsection{\texorpdfstring{dc\+\_\+motor3\+\_\+clockwise()}{dc\_motor3\_clockwise()}}
+{\footnotesize\ttfamily void dc\+\_\+motor3\+\_\+clockwise (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Set DC motor direction like clockwise. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{dc__motor__3__click_8c_af6c5a21a8340b17b7410b4a67b9a5ffd}\label{dc__motor__3__click_8c_af6c5a21a8340b17b7410b4a67b9a5ffd}} 
+\index{dc\+\_\+motor\+\_\+3\+\_\+click.\+c@{dc\+\_\+motor\+\_\+3\+\_\+click.\+c}!dc\+\_\+motor3\+\_\+counter\+\_\+clockwise@{dc\+\_\+motor3\+\_\+counter\+\_\+clockwise}}
+\index{dc\+\_\+motor3\+\_\+counter\+\_\+clockwise@{dc\+\_\+motor3\+\_\+counter\+\_\+clockwise}!dc\+\_\+motor\+\_\+3\+\_\+click.\+c@{dc\+\_\+motor\+\_\+3\+\_\+click.\+c}}
+\subsubsection{\texorpdfstring{dc\+\_\+motor3\+\_\+counter\+\_\+clockwise()}{dc\_motor3\_counter\_clockwise()}}
+{\footnotesize\ttfamily void dc\+\_\+motor3\+\_\+counter\+\_\+clockwise (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Set DC motor direction opposite of clockwise which is called counterclockwise or anticlockwise. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{dc__motor__3__click_8c_a735844dc27603572182e7ba0a87f9ac4}\label{dc__motor__3__click_8c_a735844dc27603572182e7ba0a87f9ac4}} 
+\index{dc\+\_\+motor\+\_\+3\+\_\+click.\+c@{dc\+\_\+motor\+\_\+3\+\_\+click.\+c}!dc\+\_\+motor3\+\_\+init@{dc\+\_\+motor3\+\_\+init}}
+\index{dc\+\_\+motor3\+\_\+init@{dc\+\_\+motor3\+\_\+init}!dc\+\_\+motor\+\_\+3\+\_\+click.\+c@{dc\+\_\+motor\+\_\+3\+\_\+click.\+c}}
+\subsubsection{\texorpdfstring{dc\+\_\+motor3\+\_\+init()}{dc\_motor3\_init()}}
+{\footnotesize\ttfamily void dc\+\_\+motor3\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+DC motor initialization. Set initial direction and set speed to zero by controlling G\+P\+IO\textquotesingle{}s and P\+WM. Initially motor will be stopped. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{dc__motor__3__click_8c_a940b59258257a43b9107509af01a11e3}\label{dc__motor__3__click_8c_a940b59258257a43b9107509af01a11e3}} 
+\index{dc\+\_\+motor\+\_\+3\+\_\+click.\+c@{dc\+\_\+motor\+\_\+3\+\_\+click.\+c}!dc\+\_\+motor3\+\_\+set\+\_\+speed@{dc\+\_\+motor3\+\_\+set\+\_\+speed}}
+\index{dc\+\_\+motor3\+\_\+set\+\_\+speed@{dc\+\_\+motor3\+\_\+set\+\_\+speed}!dc\+\_\+motor\+\_\+3\+\_\+click.\+c@{dc\+\_\+motor\+\_\+3\+\_\+click.\+c}}
+\subsubsection{\texorpdfstring{dc\+\_\+motor3\+\_\+set\+\_\+speed()}{dc\_motor3\_set\_speed()}}
+{\footnotesize\ttfamily int32\+\_\+t dc\+\_\+motor3\+\_\+set\+\_\+speed (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{speed }\end{DoxyParamCaption})}
+
+
+
+Control DC motor speed. This is related to used DC motor driver. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em speed} & Speed can be set in range. This range is determinated by used P\+WM and it\textquotesingle{}s configuration. P\+WM frequency needs to be 100k\+Hz.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error Code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{dc__motor__3__click_8c_a3e3d5b9b548d99ba21c886d5226c2a08}\label{dc__motor__3__click_8c_a3e3d5b9b548d99ba21c886d5226c2a08}} 
+\index{dc\+\_\+motor\+\_\+3\+\_\+click.\+c@{dc\+\_\+motor\+\_\+3\+\_\+click.\+c}!dc\+\_\+motor3\+\_\+short\+\_\+brake@{dc\+\_\+motor3\+\_\+short\+\_\+brake}}
+\index{dc\+\_\+motor3\+\_\+short\+\_\+brake@{dc\+\_\+motor3\+\_\+short\+\_\+brake}!dc\+\_\+motor\+\_\+3\+\_\+click.\+c@{dc\+\_\+motor\+\_\+3\+\_\+click.\+c}}
+\subsubsection{\texorpdfstring{dc\+\_\+motor3\+\_\+short\+\_\+brake()}{dc\_motor3\_short\_brake()}}
+{\footnotesize\ttfamily void dc\+\_\+motor3\+\_\+short\+\_\+brake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+DC motor short brake mode. This function will cause immediately stop. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{dc__motor__3__click_8c_ab08c671126dc1d1a42d4c9f341e66ba9}\label{dc__motor__3__click_8c_ab08c671126dc1d1a42d4c9f341e66ba9}} 
+\index{dc\+\_\+motor\+\_\+3\+\_\+click.\+c@{dc\+\_\+motor\+\_\+3\+\_\+click.\+c}!dc\+\_\+motor3\+\_\+standby@{dc\+\_\+motor3\+\_\+standby}}
+\index{dc\+\_\+motor3\+\_\+standby@{dc\+\_\+motor3\+\_\+standby}!dc\+\_\+motor\+\_\+3\+\_\+click.\+c@{dc\+\_\+motor\+\_\+3\+\_\+click.\+c}}
+\subsubsection{\texorpdfstring{dc\+\_\+motor3\+\_\+standby()}{dc\_motor3\_standby()}}
+{\footnotesize\ttfamily void dc\+\_\+motor3\+\_\+standby (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+DC motor stop mode. This function will cause soft stop. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{dc__motor__3__click_8c_a8d5f5b3124ac09eba3d74abea88589d2}\label{dc__motor__3__click_8c_a8d5f5b3124ac09eba3d74abea88589d2}} 
+\index{dc\+\_\+motor\+\_\+3\+\_\+click.\+c@{dc\+\_\+motor\+\_\+3\+\_\+click.\+c}!dc\+\_\+motor3\+\_\+stop@{dc\+\_\+motor3\+\_\+stop}}
+\index{dc\+\_\+motor3\+\_\+stop@{dc\+\_\+motor3\+\_\+stop}!dc\+\_\+motor\+\_\+3\+\_\+click.\+c@{dc\+\_\+motor\+\_\+3\+\_\+click.\+c}}
+\subsubsection{\texorpdfstring{dc\+\_\+motor3\+\_\+stop()}{dc\_motor3\_stop()}}
+{\footnotesize\ttfamily void dc\+\_\+motor3\+\_\+stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+DC motor stop mode. This function will cause normal stop. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}

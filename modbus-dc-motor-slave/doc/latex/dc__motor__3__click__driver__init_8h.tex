@@ -1,0 +1,109 @@
+\hypertarget{dc__motor__3__click__driver__init_8h}{}\section{Dependencies/dc\+\_\+motor\+\_\+3\+\_\+click/dc\+\_\+motor\+\_\+3\+\_\+click\+\_\+driver\+\_\+init.h File Reference}
+\label{dc__motor__3__click__driver__init_8h}\index{Dependencies/dc\+\_\+motor\+\_\+3\+\_\+click/dc\+\_\+motor\+\_\+3\+\_\+click\+\_\+driver\+\_\+init.\+h@{Dependencies/dc\+\_\+motor\+\_\+3\+\_\+click/dc\+\_\+motor\+\_\+3\+\_\+click\+\_\+driver\+\_\+init.\+h}}
+{\ttfamily \#include \char`\"{}dc\+\_\+motor\+\_\+3\+\_\+click.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{dc__motor__3__click__driver__init_8h_a6108d6b2534062c074ef8cf50481d606}{in1\+\_\+pin\+\_\+control}} (bool state)
+\begin{DoxyCompactList}\small\item\em Control signal input 1. Together with in2 it is used for set motor direction or to stop it. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{dc__motor__3__click__driver__init_8h_abec6edd27249d3ab4910a479afabce01}{in2\+\_\+pin\+\_\+control}} (bool state)
+\begin{DoxyCompactList}\small\item\em Control signal input 2. Together with in1 it is used for set motor direction or to stop it. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{dc__motor__3__click__driver__init_8h_a3e752e6640d0aa712c50521a62c9ebf4}{slp\+\_\+pin\+\_\+control}} (bool state)
+\begin{DoxyCompactList}\small\item\em Standby pin. Set motor into Start mode(equals High) or in Standby mode(equals Low). \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{dc__motor__3__click__driver__init_8h_a7996b53e3d1ed8c87fb324bc054fc817}{pwm\+\_\+init}} (void)
+\begin{DoxyCompactList}\small\item\em P\+WM initialization. The functions to initialize P\+WM need to be called here. P\+WM is used for controlling speed of the motor. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{dc__motor__3__click__driver__init_8h_a73736afb3a5564899fd197d2156765ba}{pwm\+\_\+set\+\_\+duty}} (uint16\+\_\+t duty\+\_\+cycle)
+\begin{DoxyCompactList}\small\item\em Set P\+WM duty cycle. It will determine duration of high state in square impulse. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{dc__motor__3__click__driver__init_8h_a6108d6b2534062c074ef8cf50481d606}\label{dc__motor__3__click__driver__init_8h_a6108d6b2534062c074ef8cf50481d606}} 
+\index{dc\+\_\+motor\+\_\+3\+\_\+click\+\_\+driver\+\_\+init.\+h@{dc\+\_\+motor\+\_\+3\+\_\+click\+\_\+driver\+\_\+init.\+h}!in1\+\_\+pin\+\_\+control@{in1\+\_\+pin\+\_\+control}}
+\index{in1\+\_\+pin\+\_\+control@{in1\+\_\+pin\+\_\+control}!dc\+\_\+motor\+\_\+3\+\_\+click\+\_\+driver\+\_\+init.\+h@{dc\+\_\+motor\+\_\+3\+\_\+click\+\_\+driver\+\_\+init.\+h}}
+\subsubsection{\texorpdfstring{in1\+\_\+pin\+\_\+control()}{in1\_pin\_control()}}
+{\footnotesize\ttfamily void in1\+\_\+pin\+\_\+control (\begin{DoxyParamCaption}\item[{bool}]{state }\end{DoxyParamCaption})}
+
+
+
+Control signal input 1. Together with in2 it is used for set motor direction or to stop it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & Can be true or false.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{dc__motor__3__click__driver__init_8h_abec6edd27249d3ab4910a479afabce01}\label{dc__motor__3__click__driver__init_8h_abec6edd27249d3ab4910a479afabce01}} 
+\index{dc\+\_\+motor\+\_\+3\+\_\+click\+\_\+driver\+\_\+init.\+h@{dc\+\_\+motor\+\_\+3\+\_\+click\+\_\+driver\+\_\+init.\+h}!in2\+\_\+pin\+\_\+control@{in2\+\_\+pin\+\_\+control}}
+\index{in2\+\_\+pin\+\_\+control@{in2\+\_\+pin\+\_\+control}!dc\+\_\+motor\+\_\+3\+\_\+click\+\_\+driver\+\_\+init.\+h@{dc\+\_\+motor\+\_\+3\+\_\+click\+\_\+driver\+\_\+init.\+h}}
+\subsubsection{\texorpdfstring{in2\+\_\+pin\+\_\+control()}{in2\_pin\_control()}}
+{\footnotesize\ttfamily void in2\+\_\+pin\+\_\+control (\begin{DoxyParamCaption}\item[{bool}]{state }\end{DoxyParamCaption})}
+
+
+
+Control signal input 2. Together with in1 it is used for set motor direction or to stop it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & Can be true or false.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{dc__motor__3__click__driver__init_8h_a7996b53e3d1ed8c87fb324bc054fc817}\label{dc__motor__3__click__driver__init_8h_a7996b53e3d1ed8c87fb324bc054fc817}} 
+\index{dc\+\_\+motor\+\_\+3\+\_\+click\+\_\+driver\+\_\+init.\+h@{dc\+\_\+motor\+\_\+3\+\_\+click\+\_\+driver\+\_\+init.\+h}!pwm\+\_\+init@{pwm\+\_\+init}}
+\index{pwm\+\_\+init@{pwm\+\_\+init}!dc\+\_\+motor\+\_\+3\+\_\+click\+\_\+driver\+\_\+init.\+h@{dc\+\_\+motor\+\_\+3\+\_\+click\+\_\+driver\+\_\+init.\+h}}
+\subsubsection{\texorpdfstring{pwm\+\_\+init()}{pwm\_init()}}
+{\footnotesize\ttfamily int32\+\_\+t pwm\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+P\+WM initialization. The functions to initialize P\+WM need to be called here. P\+WM is used for controlling speed of the motor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error Code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{dc__motor__3__click__driver__init_8h_a73736afb3a5564899fd197d2156765ba}\label{dc__motor__3__click__driver__init_8h_a73736afb3a5564899fd197d2156765ba}} 
+\index{dc\+\_\+motor\+\_\+3\+\_\+click\+\_\+driver\+\_\+init.\+h@{dc\+\_\+motor\+\_\+3\+\_\+click\+\_\+driver\+\_\+init.\+h}!pwm\+\_\+set\+\_\+duty@{pwm\+\_\+set\+\_\+duty}}
+\index{pwm\+\_\+set\+\_\+duty@{pwm\+\_\+set\+\_\+duty}!dc\+\_\+motor\+\_\+3\+\_\+click\+\_\+driver\+\_\+init.\+h@{dc\+\_\+motor\+\_\+3\+\_\+click\+\_\+driver\+\_\+init.\+h}}
+\subsubsection{\texorpdfstring{pwm\+\_\+set\+\_\+duty()}{pwm\_set\_duty()}}
+{\footnotesize\ttfamily int32\+\_\+t pwm\+\_\+set\+\_\+duty (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{duty\+\_\+cycle }\end{DoxyParamCaption})}
+
+
+
+Set P\+WM duty cycle. It will determine duration of high state in square impulse. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em duty\+\_\+cycle} & Depending of H\+AL setup of P\+WM. Boundaries are values that determines duration of high value in square impulse. For defined P\+WM range of duty cycle is \mbox{[}0-\/200\mbox{]}, which is DC motor speed.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error Code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{dc__motor__3__click__driver__init_8h_a3e752e6640d0aa712c50521a62c9ebf4}\label{dc__motor__3__click__driver__init_8h_a3e752e6640d0aa712c50521a62c9ebf4}} 
+\index{dc\+\_\+motor\+\_\+3\+\_\+click\+\_\+driver\+\_\+init.\+h@{dc\+\_\+motor\+\_\+3\+\_\+click\+\_\+driver\+\_\+init.\+h}!slp\+\_\+pin\+\_\+control@{slp\+\_\+pin\+\_\+control}}
+\index{slp\+\_\+pin\+\_\+control@{slp\+\_\+pin\+\_\+control}!dc\+\_\+motor\+\_\+3\+\_\+click\+\_\+driver\+\_\+init.\+h@{dc\+\_\+motor\+\_\+3\+\_\+click\+\_\+driver\+\_\+init.\+h}}
+\subsubsection{\texorpdfstring{slp\+\_\+pin\+\_\+control()}{slp\_pin\_control()}}
+{\footnotesize\ttfamily void slp\+\_\+pin\+\_\+control (\begin{DoxyParamCaption}\item[{bool}]{state }\end{DoxyParamCaption})}
+
+
+
+Standby pin. Set motor into Start mode(equals High) or in Standby mode(equals Low). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & Can be true or false.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}

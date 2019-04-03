@@ -1,3 +1,0 @@
-[submodule "modbus-dc-motor-slave/wolk-modbus"]
-	path = modbus-dc-motor-slave/wolk-modbus
-	url = https://github.com/Wolkabout/wolk-modbus

@@ -5,14 +5,20 @@ DC motor control supports features like motor speed, direction, str/stop, shortb
 
 | REG.TYPE   | NAME         | DESCRIPTION                         | VALUE RANGE | DEFAULT VALUE |
 |------------|--------------|-------------------------------------|-------------|---------------|
-| H.Register | Speed        |                                     | [0-200]     | 0             |
+| H.Register | Speed        | Motor speed                         | [0-200]     | 0             |
 | Coil       | Direction    | 1 = clockwise 0 = counter clockwise | [0-1]       | 1             |
 | Coil       | Stop & Start | 1 = start 0 = stop                  | [0-1]       | 0             |
 | Coil       | Short Brake  | 1 = active 0 = inactive             | [0-1]       | 0             |
 | Coil       | Stand by     | 1 = active  0 = inactive            | [0-1]       | 0             |
 
-Default device addres is 1 in this example.
-
+RS-485 communiction interface settigns are:
+* Bits for second: 115200bps
+* Data bits: 8
+* Stop bits: 1
+* Parity: none
+* Timeout: 0.5 s - could be lower, with this parameters is tested.
+* Poll rate: 50 ms - could be lower, with this parameters is tested.
+ 
 ## Dependencies
 
 ##### HW
@@ -27,7 +33,10 @@ Default device addres is 1 in this example.
 
 ## Usage
 
+Default device addres is 1 in this example.
 ST LINK/V2 progammer or bootloader
 
 ##### Edit source
+Import project into SW4STM32 and insert changes. Minimal change that you can do is to change slave address changing this line `#define SLAVE_ADDRESS 1`
+
 For generating peripheral libraries, and modifying, run *WolkParking.ioc* file into STM32Cube generator and generate code which will be auto-embedded into the project.

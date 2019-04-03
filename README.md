@@ -1,2 +1,33 @@
 # modbus-dc-motor-slave
 This repo implementation of Modbus slave which can control DC motor. It is based on Mikroe development boards with STM32F40x MCU.
+
+DC motor control supports features like motor speed, direction, str/stop, shortbrake and standby. All of this features can be achieved changing Modbus registers. Modbus register mapping is below:
+
+| REG.TYPE   | NAME         | DESCRIPTION                         | VALUE RANGE | DEFAULT VALUE |
+|------------|--------------|-------------------------------------|-------------|---------------|
+| H.Register | Speed        |                                     | [0-200]     | 0             |
+| Coil       | Direction    | 1 = clockwise 0 = counter clockwise | [0-1]       | 1             |
+| Coil       | Stop & Start | 1 = start 0 = stop                  | [0-1]       | 0             |
+| Coil       | Short Brake  | 1 = active 0 = inactive             | [0-1]       | 0             |
+| Coil       | Stand by     | 1 = active  0 = inactive            | [0-1]       | 0             |
+
+Default device addres is 1 in this example.
+
+## Dependencies
+
+##### HW
+* [Clicker 2 for STM32](https://www.mikroe.com/clicker-2-stm32f4)
+* [RS485 click](https://www.mikroe.com/rs485-33v-click)
+* [DC MOTOR 3 Click](https://www.mikroe.com/dc-motor-3-click)
+* [DC Motor Precision Gearmotor - 45 RPM (6-12V)](https://www.sparkfun.com/products/retired/12514). You can use any other DC motor which satisfies driver characteristics.
+
+##### IDE's
+ * [STM32Cube initialization code generator](https://www.st.com/en/development-tools/stm32cubemx.html)
+ * [SW4STM32](https://www.st.com/en/development-tools/sw4stm32.html)
+
+## Usage
+
+ST LINK/V2 progammer or bootloader
+
+##### Edit source
+For generating peripheral libraries, and modifying, run *WolkParking.ioc* file into STM32Cube generator and generate code which will be auto-embedded into the project.

@@ -12,12 +12,12 @@ DC motor control supports features like motor speed, direction, str/stop, shortb
 | Coil       | Stand by     | 1 = active  0 = inactive            | [0-1]       | 0             |
 
 RS-485 communiction interface settings are:
-* Bits for second: 115200bps
+* Bits per second: 115200bps
 * Data bits: 8
 * Stop bits: 1
 * Parity: none
-* Timeout: 0.5 s - could be lower, with this parameters is tested.
-* Poll rate: 50 ms - could be lower, with this parameters is tested.
+* Timeout: 0.5 s - (tested value, could be set to a lower one).
+* Poll rate: 50 ms - (tested value, could be set to a lower one).
  
 ## Dependencies
 
@@ -35,13 +35,13 @@ RS-485 communiction interface settings are:
 ## Example of Usage
 
 ##### Running
-Default device addres is `1` in this example and it has configured Modbus as it is described above.
+Default device address is `1` in this example and it has configured Modbus as it is described above.
 
 Use USB HID bootloader for Clicker 2 board or use [ST LINK/V2 programmer](https://www.st.com/en/development-tools/st-link-v2.html) with appropriate software to programm file:
 
 `modbus-dc-motor-slave/Debug/modbus-dc-motor-slave.hex`
 
 ##### Edit source
-Import project into SW4STM32 and insert changes. Minimal change that you can make is to change slave address changing this line `#define SLAVE_ADDRESS 1`
+Import project into SW4STM32 and insert changes. Minimal change that you can make is to change slave address by editing this line `#define SLAVE_ADDRESS 1`
 
 For further editing look at `doc` folder.

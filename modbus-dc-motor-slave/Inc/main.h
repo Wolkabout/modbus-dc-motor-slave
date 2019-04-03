@@ -90,6 +90,13 @@
 /* USER CODE BEGIN Private defines */
 extern UART_HandleTypeDef huart2;
 extern TIM_HandleTypeDef htim3;
+
+/** major version position */
+#define MODBUS_DC_MOTOR_SLAVE_VERSION_MAJOR 0
+/** minor version position */
+#define MODBUS_DC_MOTOR_SLAVE_VERSION_MINOR 0
+/** patch version position */
+#define MODBUS_DC_MOTOR_SLAVE_VERSION_PATCH 1
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus

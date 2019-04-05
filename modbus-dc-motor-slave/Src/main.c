@@ -479,23 +479,21 @@ static void motor_process(void)
 		motor_short_brake_current = Coils[SHORT_BRAKE];
 
 		motor_short_brake_current == true ? dc_motor3_short_brake() : NULL;
-		Coils[STOP_START] = motor_stop_start_current = true;
-		Coils[SHORT_BRAKE] = motor_short_brake_current = false;
+		Coils[STOP_START] = motor_stop_start_current = false;
 	}
 	if( motor_stand_by_current != Coils[STAND_BY] )
 	{
 		motor_stand_by_current = Coils[STAND_BY];
 
 		motor_stand_by_current == true ? dc_motor3_standby() : NULL;
-		Coils[STOP_START] = motor_stop_start_current = true;
-		Coils[STAND_BY] = motor_stand_by_current = false;
+		Coils[STOP_START] = motor_stop_start_current = false;
 	}
 
 	if( motor_stop_start_current != Coils[STOP_START] )
 	{
 		motor_stop_start_current = Coils[STOP_START];
 
-		if(!motor_stop_start_current)
+		if(motor_stop_start_current)
 		{
 			if(motor_direction_current)
 			{

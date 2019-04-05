@@ -3,13 +3,13 @@ This repo implementation of Modbus slave which can control DC motor. It is based
 
 DC motor control supports features like motor speed, direction, str/stop, shortbrake and standby. All of this features can be achieved changing Modbus registers. Modbus register mapping is below:
 
-| REG.TYPE   | NAME         | DESCRIPTION                         | VALUE RANGE | DEFAULT VALUE |
-|------------|--------------|-------------------------------------|-------------|---------------|
-| H.Register | Speed        | Motor speed                         | [0-200]     | 0             |
-| Coil       | Direction    | 1 = clockwise 0 = counter clockwise | [0-1]       | 1             |
-| Coil       | Stop & Start | 1 = start 0 = stop                  | [0-1]       | 0             |
-| Coil       | Short Brake  | 1 = active 0 = inactive             | [0-1]       | 0             |
-| Coil       | Stand by     | 1 = active  0 = inactive            | [0-1]       | 0             |
+| REG.TYPE   | NAME         | DESCRIPTION                                                             | VALUE RANGE | DEFAULT VALUE |
+|------------|--------------|-------------------------------------------------------------------------|-------------|---------------|
+| H.Register | Speed        | Motor speed                                                             | [0-200]     | 0             |
+| Coil       | Direction    | 1 = clockwise<br>0 = counter clockwise                                  | [0-1]       | 1             |
+| Coil       | Stop & Start | 1 = start<br>0 = stop                                                   | [0-1]       | 0             |
+| Coil       | Short Brake  | 1 = active - It will cause changing  Stop&Start Coil to zero<br>0 = inactive | [0-1]       | 0             |
+| Coil       | Stand by     | 1 = active - It will cause changing  Stop&Start Coil to zero<br>0 = inactive | [0-1]       | 0             |
 
 RS-485 communiction interface settings are:
 * Bits per second: 115200bps
